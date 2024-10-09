@@ -61,6 +61,7 @@ body, html {
   background-color: #ced4da; /* Light gray background for placeholder */
   display: flex;
   justify-content: center;
+  background-image: url('delhi.jpg');
   align-items: center;
   margin-bottom: 20px;
   font-size: 1.5rem;

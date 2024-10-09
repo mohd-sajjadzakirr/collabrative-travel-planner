@@ -32,7 +32,7 @@ function App() {
             <section id="home" className="landing-page">
               <div className="content">
                 <h1>Collaborate with friends and family to create unforgettable travel experiences</h1>
-                <div className="image-placeholder">Image Placeholder</div>
+                <div className="image-placeholder"></div>
                 <button className="create-trip-button" onClick={() => handleClick("Create Trip")}>
                   Create Trip
                 </button>
