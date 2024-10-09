@@ -1,0 +1,57 @@
+/* LoginSignInPage.css */
+.login-signin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #e8cfcf; /* Background color similar to your landing page */
+  height: 150vh;
+  padding: 0px;
+}
+
+.get-started {
+  text-align: left;
+  margin-bottom: 0px;
+}
+
+.get-started h1 {
+  font-size: 96px;
+  color: #ffffff; /* Change as per your design */
+}
+
+.login-form {
+  background-color: #ffffff; /* Background for the form */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 400px; /* Set a width for the form */
+}
+
+.login-form h2 {
+  color: #b03a3a; /* Header color for the login form */
+  margin-bottom: 20px;
+}
+
+.login-form input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.login-form button {
+  width: 50%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff5733; /* Accent color */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+  background-color: #c0392b; /* Darker shade on hover */
+}
