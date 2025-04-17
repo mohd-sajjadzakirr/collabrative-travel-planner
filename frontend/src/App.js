@@ -2,16 +2,11 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
 import LoginSignInPage from './LoginSignInPage'; // Import the login/sign-in page component
-import { auth } from './firebase.js'
-import { useAuthState } from 'react-firebase-hooks/auth'
+
+
 
 function App() {
-  const [user] = useAuthState(auth)
-  return (
-    <>
-      {user ? <Chat /> : <SignIn />}
-    </>
-  );
+  
   const handleClick = (buttonName) => {
     alert(`${buttonName} button clicked!`);
   };
