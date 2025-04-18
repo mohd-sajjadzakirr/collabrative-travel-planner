@@ -1,18 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
-import LoginSignInPage from './LoginSignInPage'; // Import the login/sign-in page component
-
-
+import LoginSignInPage from './LoginSignInPage';
+import DashboardPage from './components/DashboardPage'; // ✅ Correct import path
 
 function App() {
-  
   const handleClick = (buttonName) => {
     alert(`${buttonName} button clicked!`);
   };
 
   const openLoginPage = () => {
-    window.open('/login', '_blank'); // Open the login page in a new tab
+    window.open('/login', '_blank'); // ✅ Defined before use
   };
 
   return (
@@ -26,27 +24,31 @@ function App() {
             <Link to="#about">About</Link>
             <Link to="#features">Features</Link>
             <Link to="#chat">Chat</Link>
-            <button onClick={openLoginPage}>Login / Sign Up</button> {/* Use button to open login in new tab */}
+            <button onClick={openLoginPage}>Login / Sign Up</button>
           </div>
         </nav>
 
-        {/* Define routes for the landing page and login page */}
+        {/* Routes */}
         <Routes>
-          <Route path="/" element={  // Default landing page route
-            <section id="home" className="landing-page">
-              <div className="content">
-                <h1>Collaborate with friends and family to create unforgettable travel experiences</h1>
-                <div className="image-placeholder"></div>
-                <button className="create-trip-button" onClick={() => handleClick("Create Trip")}>
-                  Create Trip
-                </button>
-              </div>
-            </section>
-          } />
+          <Route
+            path="/"
+            element={
+              <section id="home" className="landing-page">
+                <div className="content">
+                  <h1>Collaborate with friends and family to create unforgettable travel experiences</h1>
+                  <div className="image-placeholder"></div>
+                  <button className="create-trip-button" onClick={() => handleClick("Create Trip")}>
+                    Create Trip
+                  </button>
+                </div>
+              </section>
+            }
+          />
           <Route path="/login" element={<LoginSignInPage />} />
+          <Route path="/dashboard" element={<DashboardPage />} /> {/* ✅ Added Dashboard Route */}
         </Routes>
 
-        {/* Second Section */}
+        {/* Features Section */}
         <section id="features" className="second-section">
           <div className="feature-grid">
             <div className="feature-box" onClick={() => handleClick("Real-Time Collaboration")}>
