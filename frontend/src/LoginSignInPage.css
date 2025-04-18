@@ -1,57 +1,65 @@
-/* LoginSignInPage.css */
 .login-signin-container {
+  max-width: 400px;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.tab-buttons {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: #e8cfcf; /* Background color similar to your landing page */
-  height: 150vh;
-  padding: 0px;
+  margin-bottom: 1.5rem;
 }
 
-.get-started {
-  text-align: left;
-  margin-bottom: 0px;
-}
-
-.get-started h1 {
-  font-size: 96px;
-  color: #ffffff; /* Change as per your design */
-}
-
-.login-form {
-  background-color: #ffffff; /* Background for the form */
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 400px; /* Set a width for the form */
-}
-
-.login-form h2 {
-  color: #b03a3a; /* Header color for the login form */
-  margin-bottom: 20px;
-}
-
-.login-form input {
-  width: 80%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-.login-form button {
-  width: 50%;
-  padding: 10px;
-  margin: 10px 0;
+.tab-buttons button {
+  flex: 1;
+  padding: 0.75rem;
   border: none;
-  border-radius: 5px;
-  background-color: #ff5733; /* Accent color */
-  color: white;
+  background-color: #eee;
   cursor: pointer;
-  transition: background-color 0.3s;
+  font-weight: 600;
+  border-radius: 8px 8px 0 0;
+  transition: background-color 0.3s ease-in-out;
 }
 
-.login-form button:hover {
-  background-color: #c0392b; /* Darker shade on hover */
+.tab-buttons .active {
+  background-color: #008cff;
+  color: white;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.form input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.form button {
+  padding: 0.75rem;
+  background-color: #008cff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.form button:hover {
+  background-color: #0070cc;
 }
