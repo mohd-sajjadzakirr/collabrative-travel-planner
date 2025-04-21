@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
 import LoginSignInPage from './LoginSignInPage';
 import DashboardPage from './components/DashboardPage'; // ✅ Correct import path
+import AddTripForm from './components/AddTripForm';
 
 function App() {
   const handleClick = (buttonName) => {
@@ -45,7 +46,8 @@ function App() {
             }
           />
           <Route path="/login" element={<LoginSignInPage />} />
-          <Route path="/dashboard" element={<DashboardPage />} /> {/* ✅ Added Dashboard Route */}
+          <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/add-trip" element={<AddTripForm />} /> {/* Added AddTripForm Route */}
         </Routes>
 
         {/* Features Section */}
